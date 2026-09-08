@@ -12,11 +12,13 @@
     <aside class="sidebar">
       <a class="wordmark" href="#top" aria-label="Yoh, home">Yoh<span>.</span></a>
       <nav aria-label="Work filters">
-        <button class="filter is-active" data-filter="all" type="button">Selected <span>⌘</span></button>
-        <button class="filter" data-filter="course" type="button">Courses <span>04</span></button>
-        <button class="filter" data-filter="project" type="button">Projects <span>06</span></button>
-        <button class="filter" data-filter="film" type="button">Films <span>03</span></button>
-        <a class="about-link" href="about.html">About Yoh <span>↗</span></a>
+        <button class="filter is-active" data-filter="all" type="button">All work <span>⌘</span></button>
+        <button class="filter" data-filter="course" type="button">Courses <span class="count"><i class="dot dot-course"></i>04</span></button>
+        <button class="filter" data-filter="project" type="button">Projects <span class="count"><i class="dot dot-project"></i>06</span></button>
+        <button class="filter" data-filter="film" type="button">Films <span class="count"><i class="dot dot-film"></i>03</span></button>
+        <button class="filter" data-filter="hobby" type="button">Hobbies <span class="count"><i class="dot dot-hobby"></i>03</span></button>
+        <button class="filter" data-filter="zemi" type="button">Zemi <span class="count"><i class="dot dot-zemi"></i>02</span></button>
+        <a class="about-link" href="./about.html">About Yoh <span>↗</span></a>
       </nav>
       <div class="sidebar-note">
         <p>Visualizing spatial stories, public data, and ways of learning.</p>
@@ -24,32 +26,12 @@
       </div>
     </aside>
 
-    <main id="top">
-      <header class="intro">
-        <p class="eyebrow" id="index-label">A moving index · 2026</p>
-        <h1 id="heading">Selected work</h1>
-        <p class="lede" id="deck">A small, shuffled selection of courses and projects. Follow a square to enter its story.</p>
-        <p class="hint">Each line marks a shared thread.</p>
-      </header>
-      <section class="work-field" aria-live="polite">
-        <svg class="connections" aria-hidden="true"></svg>
+    <main id="top" aria-live="polite">
+      <section class="work-field" id="index-view">
         <div class="work-grid" id="work-grid"></div>
       </section>
     </main>
-
-    <dialog class="detail" id="detail">
-      <button class="close" aria-label="Close details" type="button">×</button>
-      <div class="detail-poster" id="detail-poster">
-        <p class="detail-type" id="detail-type"></p>
-        <h2 id="detail-title"></h2>
-        <p class="detail-cue" id="detail-cue"></p>
-      </div>
-      <div class="detail-copy">
-        <p id="detail-description"></p>
-        <div class="detail-meta" id="detail-meta"></div>
-        <a class="visit" id="detail-link" target="_blank" rel="noreferrer">Visit site <span>↗</span></a>
-      </div>
-    </dialog>
+    <script src="content-parser.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -9,81 +9,20 @@
   </head>
   <body>
     <aside class="sidebar">
-      <a class="wordmark" href="index.html" aria-label="Yoh, home">Yoh<span>.</span></a>
+      <a class="wordmark" href="./index.html" aria-label="Yoh, home">Yoh<span>.</span></a>
       <nav aria-label="Site navigation">
-        <a class="filter" href="index.html">Selected <span>⌘</span></a>
-        <a class="filter" href="index.html#courses">Courses <span>04</span></a>
-        <a class="filter" href="index.html#projects">Projects <span>06</span></a>
-        <a class="filter" href="index.html#films">Films <span>03</span></a>
-        <a class="about-link is-current" href="about.html">About Yoh <span>↗</span></a>
+        <a class="filter" href="index.html">All work <span>⌘</span></a>
+        <a class="filter" href="index.html#courses">Courses <span class="count"><i class="dot dot-course"></i>04</span></a>
+        <a class="filter" href="index.html#projects">Projects <span class="count"><i class="dot dot-project"></i>06</span></a>
+        <a class="filter" href="index.html#films">Films <span class="count"><i class="dot dot-film"></i>03</span></a>
+        <a class="filter" href="index.html#hobbies">Hobbies <span class="count"><i class="dot dot-hobby"></i>03</span></a>
+        <a class="filter" href="index.html#zemi">Zemi <span class="count"><i class="dot dot-zemi"></i>02</span></a>
+        <a class="about-link is-current" href="./about.html">About Yoh <span>↗</span></a>
       </nav>
-      <div class="sidebar-note">
-        <p>Visualizing spatial stories, public data, and ways of learning.</p>
-        <a href="https://github.com/yohman" target="_blank" rel="noreferrer">GitHub ↗</a>
-      </div>
+      <div class="sidebar-note"><p>Visualizing spatial stories, public data, and ways of learning.</p><a href="https://github.com/yohman" target="_blank" rel="noreferrer">GitHub ↗</a></div>
     </aside>
-    <main class="about-main">
-      <section class="about-hero">
-        <div class="portrait"><img src="assets/yoh.png" alt="Yoh" /></div>
-        <div class="about-intro">
-          <p class="eyebrow">Professor · filmmaker · designer · researcher</p>
-          <h1>Hi, I’m Yoh.</h1>
-          <p class="large-copy">I make maps, films, and interactive experiences that help people see place, memory, and each other more clearly.</p>
-          <p>Based at Reitaku University in Chiba, I teach and lead interdisciplinary, project-based learning across design, storytelling, technology, and community engagement.</p>
-        </div>
-      </section>
-
-      <section class="about-section statement">
-        <p class="section-kicker">The work</p>
-        <p class="statement-copy">My work begins with a simple belief: academic and technical practice matter most when they create room for collaboration, curiosity, and meaningful engagement with communities.</p>
-      </section>
-
-      <section class="about-section two-column">
-        <div><p class="section-kicker">Now</p><h2>Memory, identity, place.</h2></div>
-        <div class="prose">
-          <p>I’m exploring memory cultures and immersive narratives of place: how maps, film, interactive media, and emerging technologies can preserve, interpret, and communicate lived experience.</p>
-          <p>Current work includes <em>Memory Mapping</em>, interactive three-dimensional landscapes for personal memory, and <em>Kashiwa After Dark</em>, a spatial ethnography of youth culture, public space, and the city at night.</p>
-        </div>
-      </section>
-
-      <section class="about-section two-column">
-        <div><p class="section-kicker">Teaching</p><h2>Learning by making, together.</h2></div>
-        <div class="prose">
-          <p>At Reitaku’s Faculty of Engineering, I bring design, storytelling, technology, and community engagement into the same room. My courses include programming, data visualization, GIS, statistics, UI/UX, and the Global Engineer studio.</p>
-          <p>I also serve as Vice Director of Reitaku’s International Center.</p>
-        </div>
-      </section>
-
-      <section class="about-section two-column">
-        <div><p class="section-kicker">Before Reitaku</p><h2>Twenty-five years at UCLA.</h2></div>
-        <div class="prose">
-          <p>At UCLA, I led research, teaching, and public-engagement initiatives in geographic information systems, digital mapping, and the urban humanities. I helped develop the Urban Humanities Initiative and founded the International Humanitarian Mapathon.</p>
-          <p>Earlier work included spatial data visualization at the Office of Advanced Research Computing and information technology leadership at UCLA’s Center for Neighborhood Knowledge.</p>
-        </div>
-      </section>
-
-      <section class="about-section film-section">
-        <p class="section-kicker">Films & books</p>
-        <div class="film-grid">
-          <article><p>2026</p><h2><em>Airi</em></h2><span>Director</span><p>A documentary about silence, memory, dialogue, identity, and the human aftermath of disaster.</p></article>
-          <article><p>2019</p><h2><em>Human Error</em></h2><span>Director</span><p>A film on the Fukushima nuclear disaster through the experiences of displaced residents.</p></article>
-          <article><p>2014</p><h2><em>HyperCities</em></h2><span>Co-author</span><p><em>Thick Mapping in the Digital Humanities</em>, Harvard University Press.</p></article>
-        </div>
-      </section>
-
-      <section class="about-section two-column education">
-        <div><p class="section-kicker">Education</p><h2>Urban planning, sociology, and cities as stories.</h2></div>
-        <div class="timeline">
-          <p><span>2015–20</span> PhD, Urban Planning · UCLA</p>
-          <p><span>1995–97</span> MA, Urban Planning · UCLA</p>
-          <p><span>1990–94</span> BA, Sociology · International Christian University, Tokyo</p>
-        </div>
-      </section>
-
-      <footer class="about-footer">
-        <p>Prefer the short version? Please call me Yoh.</p>
-        <a href="assets/Yoh-Kawano-CV-Bio.docx">CV &amp; biography ↓</a>
-      </footer>
-    </main>
+    <main class="about-main" id="about-content"></main>
+    <script src="content-parser.js"></script>
+    <script src="about.js"></script>
   </body>
 </html>
