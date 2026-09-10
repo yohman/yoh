@@ -15,8 +15,9 @@ aboutRoot.innerHTML = `
 
 Object.keys(categories).forEach(category => {
   const target = document.querySelector(`[href="index.html#${categories[category].label.toLowerCase()}"] .count`);
-  if (target) target.innerHTML = `${marker(category)}${String(cards.filter(card => card.category === category).length).padStart(2, '0')}`;
+  if (target) target.textContent = String(cards.filter(card => card.category === category).length).padStart(2, '0');
 });
+
 }).catch(() => {
   document.querySelector('#about-content').innerHTML = '<p class="load-error">Could not load content.md. Please try again from the published site.</p>';
 });
