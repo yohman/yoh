@@ -270,9 +270,23 @@ id: map-library
 category: project
 year: Ongoing
 link: https://github.com/yohman/maplibrary
-image: images/hypercities.png
+image: images/hypercities-map-library.png
 cue: Digital humanities archive
 summary: A curated and renewed archive of digital mapping projects from the HyperCities era.
+---
+
+A renewed archive of digital mapping work, preserving a formative moment in spatial digital humanities.
+
+## HyperCities
+
+---
+id: hypercities
+category: project
+year: Ongoing
+link: https://yohman.github.io/hypercities/
+image: images/hypercities.png
+cue: Digital humanities · thick mapping
+summary: HyperCities Redesign reimagines the original HyperCities project for the present web. Rather than simply archiving the 2014 book HyperCities: Thick Mapping in the Digital Humanities and its collection of 400+ georeferenced historical maps, the project turns them into a new exploratory environment. The book is being structured as a network of places, people, concepts, passages, events, and relationships, then connected to the historical map archive. Visitors will be able to “core” a place to reveal stacked layers of historical maps through time, then wander laterally through related ideas, voices, images, and places in a kind of digital dérive. The goal is not to build a website about HyperCities, but to make the website itself behave like HyperCities: layered, polyvocal, spatial, temporal, and open-ended.
 ---
 
 A renewed archive of digital mapping work, preserving a formative moment in spatial digital humanities.
