@@ -1,5 +1,5 @@
 window.loadPortfolioContent = async function loadPortfolioContent() {
-  const response = await fetch('content.md');
+  const response = await fetch('content.md', { cache: 'no-cache' });
   if (!response.ok) throw new Error('content.md could not be loaded');
   return parsePortfolioMarkdown(await response.text());
 };

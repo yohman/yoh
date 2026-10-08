@@ -165,6 +165,20 @@ summary: A studio for examining engineering practice through global contexts and
 
 A global studio in people, places, systems, and choices. Students map systems, meet practitioners, test ideas, and make a public response.
 
+## Reitaku Engineer
+
+---
+id: reitaku-engineer
+category: course
+year: Fall 2026
+link: https://yohman.github.io/26-2-Reitaku-Engineer/
+image:
+cue: People · technology · responsibility
+summary: A course with Koshee and Yoh exploring what engineers do and how their choices shape people's lives.
+---
+
+Hear from practitioners working with technology and society, reflect on their experiences, and work in groups to explore a problem and present a response.
+
 ## Statistics B
 
 ---

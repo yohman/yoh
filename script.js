@@ -16,13 +16,23 @@ function tileShape(index) {
   const shapes = ['feature', 'landscape', 'standard', 'standard', 'portrait', 'landscape', 'standard', 'standard'];
   return shapes[index % shapes.length];
 }
+function initials(title) {
+  return title.split(/\s+/).filter(word => /^[A-Za-z0-9]/.test(word)).map(word => word[0]).slice(0, 3).join('').toUpperCase();
+}
+function thumbnail(card) {
+  return `<span class="card-media">${card.image ? `<img src="${card.image}" alt="" loading="lazy" /><span class="card-initials" hidden aria-hidden="true">${initials(card.title)}</span>` : `<span class="card-initials" aria-hidden="true">${initials(card.title)}</span>`}</span><h2 class="card-title">${marker(card.category)}${card.title}</h2>`;
+}
 function showIndex(filter = 'all', updateUrl = false) {
   currentFilter = filter;
   main.className = '';
   main.innerHTML = `<section class="work-field" id="index-view"><div class="work-grid" id="work-grid"></div></section>`;
   visible = filter === 'all' ? shuffle(cards) : cards.filter(card => card.category === filter);
   const grid = document.querySelector('#work-grid');
-  grid.innerHTML = visible.map((card, index) => `<article class="work tile-${tileShape(index)}" style="animation-delay:${index * .035}s"><button class="card-reading" data-id="${card.id}" type="button" aria-label="Read about ${card.title}"><span class="card-media">${card.image ? `<img src="${card.image}" alt="" />` : ''}</span><h2 class="card-title">${marker(card.category)}${card.title}</h2></button><span class="card-actions"><button class="card-action" data-id="${card.id}" type="button" aria-label="Read about ${card.title}">i</button>${card.url ? `<a class="card-action" href="${card.url}" target="_blank" rel="noreferrer" aria-label="Visit ${card.title}">↗</a>` : ''}</span></article>`).join('');
+  grid.innerHTML = visible.map((card, index) => `<article class="work tile-${tileShape(index)}" style="animation-delay:${index * .035}s">${card.url ? `<a class="card-reading" href="${card.url}" aria-label="Visit ${card.title}">${thumbnail(card)}</a>` : `<button class="card-reading" data-id="${card.id}" type="button" aria-label="Read about ${card.title}">${thumbnail(card)}</button>`}<span class="card-actions"><button class="card-action" data-id="${card.id}" type="button" aria-label="Read about ${card.title}">i</button></span></article>`).join('');
+  grid.querySelectorAll('.card-media img').forEach(img => img.addEventListener('error', () => {
+    img.hidden = true;
+    img.nextElementSibling.hidden = false;
+  }));
   document.querySelector('.filter.is-active')?.classList.remove('is-active');
   document.querySelector(`[data-filter="${filter}"]`)?.classList.add('is-active');
   if (updateUrl) history.pushState({ filter }, '', filter === 'all' ? '#top' : `#${categories[filter].label.toLowerCase()}`);
@@ -44,7 +54,7 @@ function applyHash() {
   showIndex(category || 'all');
 }
 document.querySelectorAll('.filter').forEach(button => button.addEventListener('click', () => showIndex(button.dataset.filter, true)));
-main.addEventListener('click', event => { const card = event.target.closest('.card-reading, .card-action[type="button"]'); if (card) showCard(card.dataset.id); });
+main.addEventListener('click', event => { const card = event.target.closest('button.card-reading, .card-action[type="button"]'); if (card) showCard(card.dataset.id); });
 window.addEventListener('popstate', applyHash);
 updateCounts();
 applyHash();
