@@ -127,6 +127,7 @@ The gallery privileges accumulation and atmosphere over a fixed beginning or end
 
 ---
 id: programming
+favicon: assets/favicons/programming.svg
 category: course
 year: Fall 2026
 link: https://yohman.github.io/26-2-Programming/agenda.html
@@ -141,6 +142,7 @@ From a line to a system: students learn by making small things run, changing the
 
 ---
 id: dataviz
+favicon: assets/favicons/dataviz.svg
 category: course
 year: Fall 2026
 link: https://yohman.github.io/26-2-Dataviz/
@@ -155,6 +157,7 @@ A studio for visual attention and visual argument. Students learn to make claims
 
 ---
 id: engineer
+favicon: assets/favicons/global-engineer.svg
 category: course
 year: Fall 2026
 link: https://yohman.github.io/26-2-Global-Engineer/
@@ -169,6 +172,7 @@ A global studio in people, places, systems, and choices. Students map systems, m
 
 ---
 id: reitaku-engineer
+favicon: assets/favicons/reitaku-engineer.svg
 category: course
 year: Fall 2026
 link: https://yohman.github.io/26-2-Reitaku-Engineer/
@@ -183,6 +187,7 @@ Hear from practitioners working with technology and society, reflect on their ex
 
 ---
 id: stats
+favicon: assets/favicons/stats.svg
 category: course
 year: Fall 2026
 link: https://yohman.github.io/26-2-StatsB/

@@ -61,6 +61,6 @@ function parseAbout(source) {
 function parseCards(source) {
   return [...source.matchAll(/^## (.+)\n([\s\S]*?)(?=^## |(?![\s\S]))/gm)].map(match => {
     const [data, body] = parseMetadata(match[2]);
-    return { id: data.id, category: data.category, title: match[1].trim(), year: data.year, url: data.link || '', image: data.image || '', cue: data.cue || '', summary: data.summary || '', body: paragraphs(body) };
+    return { id: data.id, category: data.category, title: match[1].trim(), year: data.year, url: data.link || '', image: data.image || '', favicon: data.favicon || '', cue: data.cue || '', summary: data.summary || '', body: paragraphs(body) };
   }).filter(card => card.id && card.category && card.title);
 }

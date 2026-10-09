@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Statistics B</title>
+  <rect x="2" y="2" width="60" height="60" rx="13" fill="#008c95"/>
+  <path d="M21 13v38M21 14h14c8 0 12 4 12 9s-4 9-12 9H21m0 0h15c9 0 13 4 13 10s-4 9-13 9H21" fill="none" stroke="#fffaf1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
