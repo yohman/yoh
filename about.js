@@ -7,7 +7,7 @@ const journey = places.length ? `<figure class="journey" aria-label="${about['jo
 
 aboutRoot.innerHTML = `
   <section class="about-hero">
-    <div class="portrait-journey"><div class="portrait"><img src="assets/yoh.png" alt="Yoh" /></div>${journey}</div>
+    <div class="portrait-journey"><div class="portrait"><img src="${about.portrait}" alt="Yoh" /></div>${journey}</div>
     <div class="about-intro"><p class="eyebrow">${about.eyebrow}</p><h1>${about.title}</h1><p class="large-copy">${about.lead}</p><p>${about.intro}</p></div>
   </section>
   <section class="about-section statement"><p class="section-kicker">${window.portfolioText('The work')} ${marker('project')}</p><p class="statement-copy">${about.statement}</p></section>

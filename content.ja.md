@@ -7,7 +7,7 @@
 ---
 eyebrow: 教授 · 映画監督 · デザイナー · 研究者
 title: こんにちは、Yohです。
-portrait: assets/yoh.png
+portrait: assets/yoh-cutout.png
 journey-label: 場所をつなぐ歩み
 journey: 大阪, 日本 | カリ, コロンビア | バンコク, タイ | 東京, 日本 | ロサンゼルス, アメリカ | 千葉, 日本
 journey-now: 現在

@@ -11,7 +11,7 @@ To add a card, copy an existing card under **Portfolio cards**, change its `id`,
 ---
 eyebrow: Professor · filmmaker · designer · researcher
 title: Hi, I’m Yoh.
-portrait: assets/yoh.png
+portrait: assets/yoh-cutout.png
 journey-label: A journey through places
 journey: Osaka, Japan | Cali, Colombia | Bangkok, Thailand | Tokyo, Japan | Los Angeles, USA | Chiba, Japan
 journey-now: Now
