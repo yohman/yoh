@@ -174,6 +174,7 @@ A global studio in people, places, systems, and choices. Students map systems, m
 
 ---
 id: re-future
+favicon: assets/favicons/future.svg
 category: course
 year:
 link: https://yohman.github.io/future/
