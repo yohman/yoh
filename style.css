@@ -64,6 +64,7 @@ html[lang="ja"] .card-title { letter-spacing:.02em; }
 .about-hero { grid-template-columns:minmax(300px,340px) minmax(230px,1fr); gap:36px; }
 .portrait-journey { display:grid; grid-template-columns:minmax(120px,160px) minmax(150px,1fr); gap:14px; align-items:start; }
 .journey { position:relative; height:312px; margin:0; }
+.portrait-journey .portrait { height:312px; aspect-ratio:auto; }
 .journey svg { position:absolute; left:0; top:0; width:52px; height:312px; overflow:visible; }
 .journey path { fill:none; stroke:var(--muted); stroke-width:1; stroke-dasharray:1 5; stroke-linecap:round; }
 .journey circle { fill:var(--paper); stroke:var(--ink); stroke-width:1; }
