@@ -2,6 +2,8 @@
 
 Edit this file to update the portfolio. Every card and every word on the About page lives here.
 
+Japanese translations live in `content.ja.md`. Keep matching card `id` values in both files. Links, images, favicons, and categories are shared from this English file. The EN/JP toggle carries the selected language between pages in the URL (`?lang=ja`). Keep the structural headings in the Japanese file unchanged; translate its titles, metadata text, and body paragraphs.
+
 To add a card, copy an existing card under **Portfolio cards**, change its `id`, and edit the fields. Categories must be `course`, `project`, `film`, `hobby`, or `zemi`; they control the filter and colour automatically. Put a local path such as `assets/my-image.jpg` (or an image URL) after `image:` when you have an image. Leave it blank to use a typographic card instead.
 
 # About

@@ -1,7 +1,19 @@
 window.loadPortfolioContent = async function loadPortfolioContent() {
   const response = await fetch('content.md', { cache: 'no-cache' });
   if (!response.ok) throw new Error('content.md could not be loaded');
-  return parsePortfolioMarkdown(await response.text());
+  const english = parsePortfolioMarkdown(await response.text());
+  if (window.portfolioLanguage !== 'ja') return english;
+  const japaneseResponse = await fetch('content.ja.md', { cache: 'no-cache' });
+  if (!japaneseResponse.ok) throw new Error('Japanese content could not be loaded');
+  const japanese = parsePortfolioMarkdown(await japaneseResponse.text());
+  english.about = japanese.about;
+  english.cards = english.cards.map(card => {
+    const translated = japanese.cards.find(item => item.id === card.id);
+    return translated ? { ...card, title: translated.title, year: translated.year, cue: translated.cue, summary: translated.summary, body: translated.body } : card;
+  });
+  const labels = { course: '授業', project: 'プロジェクト', film: '映画', hobby: '趣味', zemi: 'ゼミ' };
+  Object.entries(labels).forEach(([key, value]) => { english.categories[key].singular = value; });
+  return english;
 };
 
 function parsePortfolioMarkdown(markdown) {

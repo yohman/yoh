@@ -6,6 +6,15 @@ let currentFilter = 'all';
 function shuffle(items) { return [...items].sort(() => Math.random() - .5); }
 function marker(category) { return `<i class="marker marker-${category}" aria-hidden="true"></i>`; }
 function categoryLabel(category) { return `${marker(category)}${categories[category].singular}`; }
+function translateView() {
+  main.querySelectorAll('[aria-label]').forEach(element => {
+    element.setAttribute('aria-label', element.getAttribute('aria-label').replace(/^Read about /, `${window.portfolioText('Read about')} `).replace(/^Visit /, `${window.portfolioText('Visit')} `));
+  });
+  const back = main.querySelector('.back');
+  if (back) back.textContent = window.portfolioText('← Index');
+  const visit = main.querySelector('.visit');
+  if (visit) visit.firstChild.textContent = `${window.portfolioText('Visit project')} `;
+}
 function updateCounts() {
   Object.keys(categories).forEach(category => {
     const target = document.querySelector(`[data-filter="${category}"] .count`);
@@ -17,7 +26,8 @@ function tileShape(index) {
   return shapes[index % shapes.length];
 }
 function initials(title) {
-  return title.split(/\s+/).filter(word => /^[A-Za-z0-9]/.test(word)).map(word => word[0]).slice(0, 3).join('').toUpperCase();
+  const words = title.split(/\s+/).filter(word => /^[A-Za-z0-9]/.test(word));
+  return words.length ? words.map(word => word[0]).slice(0, 3).join('').toUpperCase() : Array.from(title).slice(0, 2).join('');
 }
 function thumbnail(card) {
   const source = card.image || card.favicon;
@@ -36,6 +46,7 @@ function showIndex(filter = 'all', updateUrl = false) {
   }));
   document.querySelector('.filter.is-active')?.classList.remove('is-active');
   document.querySelector(`[data-filter="${filter}"]`)?.classList.add('is-active');
+  translateView();
   if (updateUrl) history.pushState({ filter }, '', filter === 'all' ? '#top' : `#${categories[filter].label.toLowerCase()}`);
 }
 function showCard(id, updateUrl = true) {
@@ -45,6 +56,7 @@ function showCard(id, updateUrl = true) {
   main.className = 'reading-view';
   main.innerHTML = `<article class="reading"><button class="back" type="button">← Index</button><header class="reading-header"><p class="reading-category">${categoryLabel(card.category)} <span>${card.year}</span></p><h1>${card.title}</h1><p class="reading-cue">${card.cue}</p></header>${card.image ? `<figure class="reading-image"><img src="${card.image}" alt="" /></figure>` : ''}<div class="reading-body"><p class="reading-summary">${card.summary}</p>${card.body.map(paragraph => `<p>${paragraph}</p>`).join('')}${card.url ? `<a class="visit" href="${card.url}" target="_blank" rel="noreferrer">Visit project <span>↗</span></a>` : ''}</div></article>`;
   if (updateUrl) history.pushState({ card: id, filter: currentFilter }, '', `#card=${id}`);
+  translateView();
   main.querySelector('.back').addEventListener('click', () => { history.pushState({ filter: currentFilter }, '', currentFilter === 'all' ? '#top' : `#${categories[currentFilter].label.toLowerCase()}`); showIndex(currentFilter); });
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -60,5 +72,5 @@ window.addEventListener('popstate', applyHash);
 updateCounts();
 applyHash();
 }).catch(() => {
-  document.querySelector('main').innerHTML = '<p class="load-error">Could not load content.md. Please try again from the published site.</p>';
+  document.querySelector('main').innerHTML = `<p class="load-error">${window.portfolioText('Could not load content.md. Please try again from the published site.')}</p>`;
 });
