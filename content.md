@@ -168,6 +168,18 @@ summary: A studio for examining engineering practice through global contexts and
 
 A global studio in people, places, systems, and choices. Students map systems, meet practitioners, test ideas, and make a public response.
 
+## Re: 未来
+
+---
+id: re-future
+category: course
+year:
+link: https://yohman.github.io/future/
+image:
+cue:
+summary: Re: 未来
+---
+
 ## Reitaku Engineer
 
 ---
