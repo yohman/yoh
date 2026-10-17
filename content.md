@@ -12,6 +12,9 @@ To add a card, copy an existing card under **Portfolio cards**, change its `id`,
 eyebrow: Professor · filmmaker · designer · researcher
 title: Hi, I’m Yoh.
 portrait: assets/yoh.png
+journey-label: A journey through places
+journey: Osaka, Japan | Cali, Colombia | Bangkok, Thailand | Tokyo, Japan | Los Angeles, USA | Chiba, Japan
+journey-now: Now
 lead: I make maps, films, and interactive experiences that help people see place, memory, and each other more clearly.
 intro: Based at Reitaku University in Chiba, I teach and lead interdisciplinary, project-based learning across design, storytelling, technology, and community engagement.
 works-label: Films & books
