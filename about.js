@@ -8,7 +8,7 @@ const journey = places.length ? `<figure class="journey" aria-label="${about['jo
 aboutRoot.innerHTML = `
   <section class="about-hero">
     <div class="portrait-journey"><div class="portrait"><img src="${about.portrait}" alt="Yoh" /></div>${journey}</div>
-    <div class="about-intro"><p class="eyebrow">${about.eyebrow}</p><h1>${about.title}</h1><p class="large-copy">${about.lead}</p><p>${about.intro}</p></div>
+    <div class="about-intro"><p class="eyebrow">${about.eyebrow}</p><h1>${about.title.replace(/([.。])$/, '<span class="title-period">$1</span>')}</h1><p class="large-copy">${about.lead}</p><p>${about.intro}</p></div>
   </section>
   <section class="about-section statement"><p class="section-kicker">${window.portfolioText('The work')} ${marker('project')}</p><p class="statement-copy">${about.statement}</p></section>
   ${about.sections.map(section => `<section class="about-section two-column"><div><p class="section-kicker">${window.portfolioText(section.label)}</p><h2>${section.title}</h2></div><div class="prose">${section.paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}</div></section>`).join('')}
