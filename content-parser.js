@@ -9,7 +9,7 @@ window.loadPortfolioContent = async function loadPortfolioContent() {
   english.about = japanese.about;
   english.cards = english.cards.map(card => {
     const translated = japanese.cards.find(item => item.id === card.id);
-    return translated ? { ...card, title: translated.title, year: translated.year, cue: translated.cue, summary: translated.summary, body: translated.body } : card;
+    return translated ? { ...card, title: translated.title, year: translated.year, cue: translated.cue, summary: translated.summary, body: translated.body, galleryCaptions: translated.galleryCaptions.length ? translated.galleryCaptions : card.galleryCaptions } : card;
   });
   const labels = { course: '授業', project: 'プロジェクト', film: '映画', hobby: '趣味', zemi: 'ゼミ' };
   Object.entries(labels).forEach(([key, value]) => { english.categories[key].singular = value; });
@@ -73,6 +73,6 @@ function parseAbout(source) {
 function parseCards(source) {
   return [...source.matchAll(/^## (.+)\n([\s\S]*?)(?=^## |(?![\s\S]))/gm)].map(match => {
     const [data, body] = parseMetadata(match[2]);
-    return { id: data.id, category: data.category, title: match[1].trim(), year: data.year, url: data.link || '', image: data.image || '', favicon: data.favicon || '', cue: data.cue || '', summary: data.summary || '', body: paragraphs(body) };
+    return { id: data.id, category: data.category, title: match[1].trim(), year: data.year, url: data.link || '', image: data.image || '', imageFit: data['image-fit'] || 'cover', gallery: (data.gallery || '').split('|').map(value => value.trim()).filter(Boolean), galleryCaptions: (data['gallery-captions'] || '').split('|').map(value => value.trim()).filter(Boolean), favicon: data.favicon || '', cue: data.cue || '', summary: data.summary || '', body: paragraphs(body) };
   }).filter(card => card.id && card.category && card.title);
 }

@@ -31,7 +31,7 @@ function initials(title) {
 }
 function thumbnail(card) {
   const source = card.image || card.favicon;
-  return `<span class="card-media">${source ? `<img class="${card.image ? 'card-photo' : 'card-favicon'}" src="${source}" alt="" loading="lazy" /><span class="card-initials" hidden aria-hidden="true">${initials(card.title)}</span>` : `<span class="card-initials" aria-hidden="true">${initials(card.title)}</span>`}${card.image && card.favicon ? `<img class="course-favicon" src="${card.favicon}" alt="" />` : ''}</span><h2 class="card-title">${marker(card.category)}${card.title}</h2>`;
+  return `<span class="card-media ${card.imageFit === 'contain' ? 'media-contain' : ''}">${source ? `<img class="${card.image ? 'card-photo' : 'card-favicon'}" src="${source}" alt="" loading="lazy" /><span class="card-initials" hidden aria-hidden="true">${initials(card.title)}</span>` : `<span class="card-initials" aria-hidden="true">${initials(card.title)}</span>`}${card.image && card.favicon ? `<img class="course-favicon" src="${card.favicon}" alt="" />` : ''}</span><h2 class="card-title">${marker(card.category)}${card.title}</h2>`;
 }
 function showIndex(filter = 'all', updateUrl = false) {
   currentFilter = filter;
@@ -56,6 +56,10 @@ function showCard(id, updateUrl = true) {
   main.className = 'reading-view';
   main.innerHTML = `<article class="reading"><button class="back" type="button">← Index</button><header class="reading-header"><p class="reading-category">${categoryLabel(card.category)} <span>${card.year}</span></p><h1>${card.title}</h1><p class="reading-cue">${card.cue}</p></header>${card.image ? `<figure class="reading-image"><img src="${card.image}" alt="" /></figure>` : ''}<div class="reading-body"><p class="reading-summary">${card.summary}</p>${card.body.map(paragraph => `<p>${paragraph}</p>`).join('')}${card.url ? `<a class="visit" href="${card.url}" target="_blank" rel="noreferrer">Visit project <span>↗</span></a>` : ''}</div></article>`;
   if (updateUrl) history.pushState({ card: id, filter: currentFilter }, '', `#card=${id}`);
+  if (card.imageFit === 'contain') main.querySelector('.reading-image')?.classList.add('media-contain');
+  if (card.gallery.length) {
+    main.querySelector('.reading').insertAdjacentHTML('beforeend', `<section class="reading-gallery" aria-label="${window.portfolioLanguage === 'ja' ? '映画の写真' : 'Film stills'}">${card.gallery.map((src, index) => `<figure><img src="${src}" alt="${card.galleryCaptions[index] || ''}" loading="lazy" />${card.galleryCaptions[index] ? `<figcaption>${card.galleryCaptions[index]}</figcaption>` : ''}</figure>`).join('')}</section>`);
+  }
   translateView();
   main.querySelector('.back').addEventListener('click', () => { history.pushState({ filter: currentFilter }, '', currentFilter === 'all' ? '#top' : `#${categories[currentFilter].label.toLowerCase()}`); showIndex(currentFilter); });
   window.scrollTo({ top: 0, behavior: 'smooth' });

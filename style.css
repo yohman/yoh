@@ -44,6 +44,14 @@ main { min-height:100vh; margin-left:220px; padding:44px clamp(28px,5vw,78px) 90
 @media (min-width:761px) and (max-width:1100px) { .work-grid { grid-template-columns:repeat(4,minmax(0,1fr)); } }
 @media (max-width:760px) { .work-grid { grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:clamp(105px,28vw,160px); gap:12px; } }
 .work-field { container-type:inline-size; }
+.card-media.media-contain { background:#000; }
+.card-media.media-contain img { object-fit:contain; padding:22px 14px 38px; }
+.reading-image.media-contain { background:#000; }
+.reading-image.media-contain img { aspect-ratio:auto; height:auto; object-fit:contain; filter:none; }
+.reading-gallery { display:grid; gap:28px; margin-top:40px; }
+.reading-gallery figure { min-width:0; margin:0; }
+.reading-gallery img { display:block; width:100%; height:auto; }
+.reading-gallery figcaption { margin-top:9px; color:var(--muted); font-size:10px; line-height:1.6; }
 .language-toggle { display:flex; gap:9px; margin-top:24px; color:var(--muted); font-size:10px; }
 .language-toggle a { text-decoration:none; padding:4px 0; }
 .language-toggle a[aria-current] { color:var(--ink); text-decoration:underline; }

@@ -4,6 +4,8 @@ Edit this file to update the portfolio. Every card and every word on the About p
 
 Japanese translations live in `content.ja.md`. Keep matching card `id` values in both files. Links, images, favicons, and categories are shared from this English file. The EN/JP toggle carries the selected language between pages in the URL (`?lang=ja`). Keep the structural headings in the Japanese file unchanged; translate its titles, metadata text, and body paragraphs.
 
+For logos, add `image-fit: contain` to show the whole image. Add detail-page photos with `gallery: path/one.jpg | path/two.jpg` and matching `gallery-captions: First caption | Second caption`. Translate the captions in `content.ja.md`; image paths stay shared from this file.
+
 To add a card, copy an existing card under **Portfolio cards**, change its `id`, and edit the fields. Categories must be `course`, `project`, `film`, `hobby`, or `zemi`; they control the filter and colour automatically. Put a local path such as `assets/my-image.jpg` (or an image URL) after `image:` when you have an image. Leave it blank to use a typographic card instead.
 
 # About
@@ -244,19 +246,24 @@ summary: A documentary examining the Fukushima nuclear disaster through the expe
 
 The film follows the human consequences of policy, displacement, and return after the Fukushima nuclear disaster.
 
-## Mirai
+## The Pen and the Voice
 
 ---
 id: mirai-film
 category: film
-year: Fall 2027
-link:
-image: images/mirai.png
-cue: Film project
-summary: An upcoming film project about futures, memory, and the long arc of place.
+year:
+link: https://www.youtube.com/watch?v=Rod6C788F7w
+image: images/pen-and-voice/logo.jpg
+image-fit: contain
+gallery: images/pen-and-voice/ishiguro.jpg | images/pen-and-voice/tobra.jpg | images/pen-and-voice/landscape.jpg
+gallery-captions: Hiroshi Ishiguro, seen on a screen during filming. | A rap performance, from The Pen and the Voice. | A walk through a rain-soaked rural landscape.
+cue: Documentary · Creativity and AI
+summary: What does it mean to create—and to be human—in a future shared with AI? The Pen and the Voice explores this question through three perspectives: Soichi, aka TOBRA, a university student and rapper; Naiki, a middle-school artist; and Hiroshi Ishiguro, the internationally renowned humanoid roboticist.
 ---
 
-A forthcoming film project.
+Through rap, drawing, and the exploration of humanlike machines, the film brings different generations and ways of thinking into conversation. A voice, a line on paper, and a robotic presence become ways of asking what we express, what makes it our own, and how technology might change our relationships with one another.
+
+Rather than offering a single prediction about AI, The Pen and the Voice invites us to consider the future through the people imagining it: their creativity, uncertainties, and search for meaning. What do we want to carry forward, and what kind of future do we want to make together?
 
 ## XaViz
 
