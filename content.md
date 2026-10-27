@@ -257,13 +257,15 @@ image: images/pen-and-voice/logo.jpg
 image-fit: contain
 gallery: images/pen-and-voice/ishiguro.jpg | images/pen-and-voice/tobra.jpg | images/pen-and-voice/landscape.jpg
 gallery-captions: Hiroshi Ishiguro, seen on a screen during filming. | A rap performance, from The Pen and the Voice. | A walk through a rain-soaked rural landscape.
-cue: Documentary · Creativity and AI
-summary: What does it mean to create—and to be human—in a future shared with AI? The Pen and the Voice explores this question through three perspectives: Soichi, aka TOBRA, a university student and rapper; Naiki, a middle-school artist; and Hiroshi Ishiguro, the internationally renowned humanoid roboticist.
+cue: Documentary · Place, originality, and AI
+summary: A rapper in the city. A boy drawing in the countryside. A roboticist known around the world. Moving between metropolitan Kanto and the quiet landscapes of Takashima beside Lake Biwa, The Pen and the Voice asks what it means to be original—and why we need to be—in a future shared with AI.
 ---
 
-Through rap, drawing, and the exploration of humanlike machines, the film brings different generations and ways of thinking into conversation. A voice, a line on paper, and a robotic presence become ways of asking what we express, what makes it our own, and how technology might change our relationships with one another.
+Filmed across the Kanto metropolitan area and the tranquil countryside of Takashima, a town on the shores of Lake Biwa, Japan’s largest lake, the film reflects on urban and rural life through three perspectives: Soichi, aka TOBRA, a university student and rapper; Naiki, a middle-school artist; and Hiroshi Ishiguro, the internationally renowned humanoid roboticist. The city’s rhythms and the countryside’s stillness place their ways of creating in different worlds, even as they face a shared future.
 
-Rather than offering a single prediction about AI, The Pen and the Voice invites us to consider the future through the people imagining it: their creativity, uncertainties, and search for meaning. What do we want to carry forward, and what kind of future do we want to make together?
+Between the rapper’s voice, the boy’s pen, and the global figure whose work questions the boundaries of the human, originality becomes more than a claim to novelty. Where does a voice of one’s own come from? How much of what we call original grows from the places we inhabit, the people we encounter, and the influences we carry? And why does being original matter so much to us?
+
+As AI unsettles familiar ideas of creativity and authorship, The Pen and the Voice brings these questions back to lived experience. Looking across city and countryside, generations and disciplines, it asks what makes an expression our own, whether originality is something we discover or something we feel compelled to prove, and what we want to preserve as we imagine our future with AI.
 
 ## XaViz
 
