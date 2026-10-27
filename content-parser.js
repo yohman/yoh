@@ -73,6 +73,7 @@ function parseAbout(source) {
 function parseCards(source) {
   return [...source.matchAll(/^## (.+)\n([\s\S]*?)(?=^## |(?![\s\S]))/gm)].map(match => {
     const [data, body] = parseMetadata(match[2]);
-    return { id: data.id, category: data.category, title: match[1].trim(), year: data.year, url: data.link || '', image: data.image || '', imageFit: data['image-fit'] || 'cover', gallery: (data.gallery || '').split('|').map(value => value.trim()).filter(Boolean), galleryCaptions: (data['gallery-captions'] || '').split('|').map(value => value.trim()).filter(Boolean), favicon: data.favicon || '', cue: data.cue || '', summary: data.summary || '', body: paragraphs(body) };
+    const memberships = [data.category, ...(data['also-in'] || '').split(',').map(value => value.trim()).filter(Boolean)];
+    return { id: data.id, category: data.category, categories: memberships, title: match[1].trim(), year: data.year, url: data.link || '', image: data.image || '', imageFit: data['image-fit'] || 'cover', gallery: (data.gallery || '').split('|').map(value => value.trim()).filter(Boolean), galleryCaptions: (data['gallery-captions'] || '').split('|').map(value => value.trim()).filter(Boolean), favicon: data.favicon || '', cue: data.cue || '', summary: data.summary || '', body: paragraphs(body) };
   }).filter(card => card.id && card.category && card.title);
 }

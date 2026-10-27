@@ -18,7 +18,7 @@ function translateView() {
 function updateCounts() {
   Object.keys(categories).forEach(category => {
     const target = document.querySelector(`[data-filter="${category}"] .count`);
-    if (target) target.textContent = String(cards.filter(card => card.category === category).length).padStart(2, '0');
+    if (target) target.textContent = String(cards.filter(card => card.categories.includes(category)).length).padStart(2, '0');
   });
 }
 function tileShape(index) {
@@ -37,7 +37,7 @@ function showIndex(filter = 'all', updateUrl = false) {
   currentFilter = filter;
   main.className = '';
   main.innerHTML = `<section class="work-field" id="index-view"><div class="work-grid" id="work-grid"></div></section>`;
-  visible = filter === 'all' ? shuffle(cards) : cards.filter(card => card.category === filter);
+  visible = filter === 'all' ? shuffle(cards) : cards.filter(card => card.categories.includes(filter));
   const grid = document.querySelector('#work-grid');
   grid.innerHTML = visible.map((card, index) => `<article class="work ${card.image ? `tile-${tileShape(index)}` : 'tile-square'}" style="animation-delay:${index * .035}s">${card.url ? `<a class="card-reading" href="${card.url}" aria-label="Visit ${card.title}">${thumbnail(card)}</a>` : `<button class="card-reading" data-id="${card.id}" type="button" aria-label="Read about ${card.title}">${thumbnail(card)}</button>`}<span class="card-actions"><button class="card-action" data-id="${card.id}" type="button" aria-label="Read about ${card.title}">i</button></span></article>`).join('');
   grid.querySelectorAll('.card-photo, .card-favicon').forEach(img => img.addEventListener('error', () => {

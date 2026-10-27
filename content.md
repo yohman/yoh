@@ -39,7 +39,7 @@ title: Memory, identity, place.
 
 I’m exploring memory cultures and immersive narratives of place: how maps, film, interactive media, and emerging technologies can preserve, interpret, and communicate lived experience.
 
-Current work includes Memory Mapping, interactive three-dimensional landscapes for personal memory, and Kashiwa After Dark, a spatial ethnography of youth culture, public space, and the city at night.
+Current work includes [Memory Mapping](https://kiseki-lab.github.io/2026-memory-map-report/), interactive three-dimensional landscapes for personal memory, and [Kashiwa After Dark](https://kashiwa-after-dark.github.io/3DMAP_DataVisu/time-space-graph/), a spatial ethnography of youth culture, public space, and the city at night.
 
 ## Teaching
 
@@ -384,8 +384,9 @@ CarlPlay is a personal music-player project exploring a more direct, focused way
 ---
 id: kashiwa-after-dark
 category: zemi
+also-in: project
 year: Ongoing
-link: https://kashiwa-after-dark.github.io/3DMAP_DataVisu/route-history/
+link: https://kashiwa-after-dark.github.io/3DMAP_DataVisu/time-space-graph/
 image: images/kashiwa.png
 cue: Spatial ethnography
 summary: A collective inquiry into youth culture, public space, and the city after nightfall.
@@ -400,6 +401,7 @@ Through observation, mapping, and storytelling, it treats the nighttime city as 
 ---
 id: memory-map
 category: zemi
+also-in: project
 year: Ongoing
 link: https://kiseki-lab.github.io/2026-memory-map-report/
 image: images/omoide.jpg

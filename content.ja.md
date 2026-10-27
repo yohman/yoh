@@ -33,7 +33,7 @@ title: 記憶、アイデンティティ、場所。
 
 記憶の文化と、場所の物語を体験する方法を探っています。地図、映画、インタラクティブメディア、新しい技術を通じて、生きられた経験をどのように残し、読み解き、伝えられるかが研究のテーマです。
 
-現在は、個人の記憶を三次元の風景として表すメモリーマッピングや、若者文化、公共空間、夜の都市を調べる空間的エスノグラフィー「Kashiwa After Dark」に取り組んでいます。
+現在は、個人の記憶を三次元の風景として表す[メモリーマッピング](https://kiseki-lab.github.io/2026-memory-map-report/)や、若者文化、公共空間、夜の都市を調べる空間的エスノグラフィー「[Kashiwa After Dark](https://kashiwa-after-dark.github.io/3DMAP_DataVisu/time-space-graph/)」に取り組んでいます。
 
 ## Teaching
 
