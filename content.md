@@ -47,7 +47,7 @@ Current work includes [Memory Mapping](https://kiseki-lab.github.io/2026-memory-
 title: Learning by making, together.
 ---
 
-At Reitaku’s Faculty of Engineering, I bring design, storytelling, technology, and community engagement into the same room. My courses include programming, data visualization, GIS, statistics, UI/UX, and the Global Engineer studio.
+At Reitaku’s Faculty of Engineering, I bring design, storytelling, technology, and community engagement into the same room. My courses include [programming](https://yohman.github.io/26-2-Programming/agenda.html), [data visualization](https://yohman.github.io/26-2-Dataviz/), [GIS](https://yohman.github.io/26-1-GIS/), [statistics](https://yohman.github.io/26-2-StatsB/), [UI/UX](https://yohman.github.io/26-1-UIUX/), and the [Global Engineer studio](https://yohman.github.io/26-2-Global-Engineer/).
 
 I also serve as Vice Director of Reitaku’s International Center.
 

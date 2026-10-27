@@ -41,7 +41,7 @@ title: 記憶、アイデンティティ、場所。
 title: ともにつくり、ともに学ぶ。
 ---
 
-麗澤大学工学部で、デザイン、物語、テクノロジー、地域との協働を結ぶ授業を担当しています。プログラミング、データ可視化、GIS、統計、UI/UX、グローバル・エンジニアなどを教えています。
+麗澤大学工学部で、デザイン、物語、テクノロジー、地域との協働を結ぶ授業を担当しています。[プログラミング](https://yohman.github.io/26-2-Programming/agenda.html)、[データ可視化](https://yohman.github.io/26-2-Dataviz/)、[GIS](https://yohman.github.io/26-1-GIS/)、[統計](https://yohman.github.io/26-2-StatsB/)、[UI/UX](https://yohman.github.io/26-1-UIUX/)、[グローバル・エンジニア](https://yohman.github.io/26-2-Global-Engineer/)などを教えています。
 
 麗澤大学国際センターの副センター長も務めています。
 
