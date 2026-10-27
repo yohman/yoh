@@ -61,7 +61,7 @@ function parseAbout(source) {
   });
   const works = [...getSection(source, 'Films & books').matchAll(/^### (.+)\n([\s\S]*?)(?=^### |(?![\s\S]))/gm)].map(match => {
     const [data, body] = parseMetadata(match[2]);
-    return { title: match[1].trim(), year: data.year || '', role: data.role || '', text: paragraphs(body).join(' ') };
+    return { title: match[1].trim(), image: data.image || '', url: data.link || '', year: data.year || '', role: data.role || '', text: paragraphs(body).join(' ') };
   });
   const education = getSection(source, 'Education').split('\n').filter(line => line.startsWith('- ')).map(line => {
     const [year, text] = line.slice(2).split('|');

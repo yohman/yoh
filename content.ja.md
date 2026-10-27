@@ -60,6 +60,8 @@ UCLAでは、GIS、デジタルマッピング、都市人文学をめぐる研�
 ### Airi
 
 ---
+image: images/airi.png
+link: index.html#card=airi
 year: 2026
 role: 監督
 ---
@@ -69,15 +71,30 @@ role: 監督
 ### Human Error
 
 ---
+image: images/humanerror.png
+link: index.html#card=human-error
 year: 2019
 role: 監督
 ---
 
 避難を余儀なくされた住民の経験を通じて、福島の原発事故を見つめる映画。
 
+### The Pen and the Voice
+
+---
+image: images/pen-and-voice/logo.jpg
+link: index.html#card=mirai-film
+year:
+role: 監督
+---
+
+都市のラッパー、田舎の少年アーティスト、世界的なロボット研究者。三人の視点から、オリジナリティとAIとの未来を見つめる映画。
+
 ### HyperCities
 
 ---
+image: images/hypercities-book.jpg
+link: https://yohman.github.io/hypercities/
 year: 2014
 role: 共著
 ---

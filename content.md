@@ -66,6 +66,8 @@ Earlier work included spatial data visualization at the Office of Advanced Resea
 ### Airi
 
 ---
+image: images/airi.png
+link: index.html#card=airi
 year: 2026
 role: Director
 ---
@@ -75,15 +77,30 @@ A documentary about silence, memory, dialogue, identity, and the human aftermath
 ### Human Error
 
 ---
+image: images/humanerror.png
+link: index.html#card=human-error
 year: 2019
 role: Director
 ---
 
 A film on the Fukushima nuclear disaster through the experiences of displaced residents.
 
+### The Pen and the Voice
+
+---
+image: images/pen-and-voice/logo.jpg
+link: index.html#card=mirai-film
+year:
+role: Director
+---
+
+A rapper in the city, a young artist in the countryside, and a world-renowned roboticist explore originality and our future with AI.
+
 ### HyperCities
 
 ---
+image: images/hypercities-book.jpg
+link: https://yohman.github.io/hypercities/
 year: 2014
 role: Co-author
 ---

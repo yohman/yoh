@@ -13,7 +13,7 @@ aboutRoot.innerHTML = `
   </section>
   <section class="about-section statement"><p class="section-kicker">${window.portfolioText('The work')} ${marker('project')}</p><p class="statement-copy">${about.statement}</p></section>
   ${about.sections.map(section => `<section class="about-section two-column"><div><p class="section-kicker">${window.portfolioText(section.label)}</p><h2>${section.title}</h2></div><div class="prose">${section.paragraphs.map(paragraph => `<p>${inlineLinks(paragraph)}</p>`).join('')}</div></section>`).join('')}
-  <section class="about-section film-section"><p class="section-kicker">${about['works-label']}</p><div class="film-grid">${about.works.map(work => `<article><p>${work.year}</p><h2><em>${work.title}</em></h2><span>${work.role}</span><p>${work.text}</p></article>`).join('')}</div></section>
+  <section class="about-section film-section"><p class="section-kicker">${about['works-label']}</p><div class="film-grid">${about.works.map(work => `<article>${work.image ? `<a class="work-thumbnail" href="${work.url}" aria-label="${work.title}"><img src="${work.image}" alt="${work.title}" loading="lazy" /></a>` : ''}<p>${work.year}</p><h2><a href="${work.url}">${work.title}</a></h2><span>${work.role}</span><p>${work.text}</p></article>`).join('')}</div></section>
   <section class="about-section two-column education"><div><p class="section-kicker">${about['education-label']}</p><h2>${about['education-title']}</h2></div><div class="timeline">${about.education.map(([year, text]) => `<p><span>${year}</span>${text}</p>`).join('')}</div></section>
   <footer class="about-footer"><p>${about.footer}</p><a href="assets/Yoh-Kawano-CV-Bio.docx">${about['cv-label']}</a></footer>`;
 
