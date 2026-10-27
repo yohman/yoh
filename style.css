@@ -78,8 +78,12 @@ html[lang="ja"] .card-title { letter-spacing:.02em; }
 .card-media .course-favicon { position:absolute; width:28px; height:28px; top:12px; left:12px; object-fit:contain; }
 @media (min-width:761px) and (max-width:1100px) { .work-grid { grid-auto-rows:calc((100cqw - 42px) / 4); } }
 @media (max-width:760px) { .work-grid { grid-auto-rows:calc((100cqw - 12px) / 2); } }
-.about-hero { grid-template-columns:minmax(460px,530px) minmax(230px,1fr); gap:36px; }
-.portrait-journey { display:grid; grid-template-columns:minmax(0,258px) 238px; gap:34px; align-items:start; }
+.about-hero { grid-template-columns:minmax(0,1fr); gap:32px; }
+.about-intro { width:100%; max-width:650px; }
+.about-intro h1 { font-size:clamp(36px,4vw,48px); }
+.about-intro .large-copy { max-width:650px; font-size:clamp(20px,2vw,26px); line-height:1.4; }
+.about-intro p:not(.eyebrow) { max-width:650px; }
+.portrait-journey { display:grid; width:100%; max-width:530px; grid-template-columns:minmax(0,258px) 238px; gap:34px; align-items:start; }
 .journey { position:relative; height:312px; margin:0; }
 .portrait-journey .portrait { height:312px; aspect-ratio:auto; }
 .portrait-journey .portrait { background:transparent; }
