@@ -17,6 +17,14 @@ aboutRoot.innerHTML = `
   <section class="about-section two-column education"><div><p class="section-kicker">${about['education-label']}</p><h2>${about['education-title']}</h2></div><div class="timeline">${about.education.map(([year, text]) => `<p><span>${year}</span>${text}</p>`).join('')}</div></section>
   <footer class="about-footer"><p>${about.footer}</p><a href="assets/Yoh-Kawano-CV-Bio.docx">${about['cv-label']}</a></footer>`;
 
+const currentHome = aboutRoot.querySelector('.journey li[aria-current="location"] .journey-city');
+if (currentHome && about['journey-other-home']) {
+  const otherHome = document.createElement('span');
+  otherHome.className = 'journey-other-home';
+  otherHome.textContent = about['journey-other-home'];
+  currentHome.append(otherHome);
+}
+
 Object.keys(categories).forEach(category => {
   const target = document.querySelector(`[href="index.html#${categories[category].label.toLowerCase()}"] .count`);
   if (target) target.textContent = String(cards.filter(card => card.categories.includes(category)).length).padStart(2, '0');
