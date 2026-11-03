@@ -104,6 +104,8 @@ html[lang="ja"] .card-title { letter-spacing:.02em; }
 @media (max-width:1280px) { .about-hero { grid-template-columns:1fr; gap:32px; }.portrait-journey { width:100%; max-width:530px; } }
 @media (max-width:540px) { .portrait-journey { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:18px; }.journey-city { font-size:9px; }.journey li[aria-current="location"] .journey-city { flex-direction:column; align-items:flex-start; gap:1px; }.journey-label-left { max-width:calc(50% - 10px); }.journey-label-right { max-width:calc(50% - 14px); } }
 .sidebar { border:0; background:#141413; }
+.about-qr { display:block; width:88px; margin:18px 0 16px; }
+.about-qr img { display:block; width:88px; height:88px; image-rendering:pixelated; }
 .filter,.about-link,.back,.reading-header,.about-section,.timeline p,.about-footer { border:0; }
 .filter,.about-link { transition:background-color .18s ease,color .18s ease; }
 .filter:hover,.filter.is-active,.about-link:hover,.about-link.is-current { background:rgba(255,255,255,.035); }
